@@ -11,7 +11,7 @@ bool IsEven(int n)
         n /= 10;
         sum += digitNumber;
     }
-    // Console.WriteLine(sum);
+    
     if (sum % 2 == 0)
     {
         return true;
@@ -27,11 +27,13 @@ while (workProgramm)
 
     if (input == Convert.ToString("q"))
     {
-        Console.WriteLine("Введено q, завершение работы программы");
+        Console.WriteLine("Введено 'q', завершение работы программы");
         workProgramm = false;
     }
+    
     int number = Convert.ToInt32(input);
     bool even = IsEven(number);
+    
     if (even == true)
     {
         Console.WriteLine($"Сумма цифр введенного числа {number} - четная, завершение работы программы");
